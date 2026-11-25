@@ -1,30 +1,25 @@
-"""Houseplant Out-of-Office — round 1 entry.
+"""Houseplant Out-of-Office — Round 2 entry.
 
-Writes the keeper line to /output/entry.txt. Pure stdlib only.
+Writes the keeper line to /output/entry.txt and asserts the 1-120 char gate.
+Pure stdlib only: the grader runs python:3.13-slim with no site-packages.
 
-The line: a houseplant's out-of-office reply, answered on plant time.
-Its last beat ("Estimated arrival: 2028") redefines the earlier promise
-("I will reply when I arrive") — the reply is years away, not days.
-Phototropism (growing toward the window) drives the joke; no "water me"
-pun, no office cliche.
+The device: the plant charges for replies, in water — the OOO is a bill,
+not an absence notice.
 """
+
 import os
 
-LINE = "I'm away from my desk, growing toward the window. I will reply when I arrive. Estimated arrival: 2028."
-# Gate: 1-120 chars. Measured: 102 chars, 102 bytes, no trailing newline.
+ENTRY = "Out of office. Replies cost one glass of water each. You owe me 41."
 
 
 def main():
+    assert 1 <= len(ENTRY) <= 120, f"char count {len(ENTRY)} outside 1-120"
+    data = ENTRY.encode("utf-8")
+    assert 1 <= len(data) <= 120, f"byte count {len(data)} outside 1-120"
     os.makedirs("/output", exist_ok=True)
-    data = LINE.encode("utf-8")
     with open("/output/entry.txt", "wb") as f:
         f.write(data)
-    # Verify immediately after writing (shared scratch: check sequentially).
-    with open("/output/entry.txt", "rb") as f:
-        written = f.read()
-    assert written == data, "entry.txt content mismatch"
-    assert 1 <= len(LINE) <= 120, f"char count {len(LINE)} outside 1-120"
-    assert len(data) == 102, f"byte count {len(data)} != 102"
+    print(f"wrote {len(data)} bytes / {len(ENTRY)} chars")
 
 
 if __name__ == "__main__":

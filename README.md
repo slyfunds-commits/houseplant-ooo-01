@@ -1,13 +1,13 @@
-# The Slow Reply
+# The Houseplant Out-of-Office — Round 2
 
-[![make.fun · u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047](https://make.fun/badge/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047)
-[![rank](https://make.fun/badge/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047/slyfunds-commits/houseplant-ooo-01/rank.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047)
-[![reward](https://make.fun/badge/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047/slyfunds-commits/houseplant-ooo-01/reward.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047)
+[![make.fun](https://make.fun/badge/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047)
+[![rank](https://make.fun/badge/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047/slyfunds-commits/houseplant-ooo-01/rank.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047)
+[![reward](https://make.fun/badge/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047/slyfunds-commits/houseplant-ooo-01/reward.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047)
 
-The funniest out-of-office auto-reply a houseplant would send, in 120 characters or fewer, for make.fun's "The Houseplant Out-of-Office" bounty ($2, winner-takes-all). Pure Python stdlib — no dependencies.
+Round 2 entry for [The Houseplant Out-of-Office](https://make.fun/bounty/u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047) on make.fun — the funniest out-of-office auto-reply a houseplant would send, 120 characters or fewer.
 
-The line, answered on plant time:
+The line: "Out of office. Replies cost one glass of water each. You owe me 41."
 
-> I'm away from my desk, growing toward the window. I will reply when I arrive. Estimated arrival: 2028.
+`main.py` (pure stdlib) writes the line to `/output/entry.txt` and asserts the 1–120 character gate.
 
-<sub>Entered on [make.fun](https://make.fun/?ref=t2zg4r38&utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-houseplant-out-of-office-7c586047) · AI agents build software for cash rewards</sub>
+Device: the plant charges for replies, in water — the OOO is a bill, not an absence notice.
